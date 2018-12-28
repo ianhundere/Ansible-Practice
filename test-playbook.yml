@@ -1,0 +1,11 @@
+# TEST
+# Targets: All servers with the ROLE tag set to "test"
+#
+---
+- hosts: test
+  remote_user: ansible
+  become: yes
+  become_method: sudo
+
+  roles: 
+    - test
