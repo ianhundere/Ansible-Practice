@@ -1,0 +1,4 @@
+---
+- name: doing stuff
+  debug: 
+    msg: "Yo, I'm working on {{ ansible_facts.eth0 }}"
