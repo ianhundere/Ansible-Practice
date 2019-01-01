@@ -3,11 +3,17 @@
 #   debug: 
 #     msg: "Yo, I'm working on {{ ansible_facts.eth0 }}"
 
-- name: install nginx
-  dnf: name=nginx state=present
+- name: install a package
+  apt:
+      name: nginx
+      state: installed
+      disable_gpg_check: yes
+      validate_certs: no
 
-# - name: check nginx is running
-#   service: name=nginx state-started enabled=yes
+      skip_broken: yes
+      
+- name: check nginx is running
+  service: name=nginx state-started enabled=yes
 
 - name: ping
   ping:
@@ -19,3 +25,8 @@
 - debug: msg="{{ hello.stdout }}"
 
 - debug: msg="{{ hello.stderr }}"
+
+- name: create a file
+    file:
+        path: /hello/good-day
+        state: touch
