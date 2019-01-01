@@ -1,10 +1,10 @@
 ---
-- name: print statement to console
-  debug: 
-    msg: "Yo, I'm working on {{ ansible_facts.eth0 }}"
+# - name: print statement to console
+#   debug: 
+#     msg: "Yo, I'm working on {{ ansible_facts.eth0 }}"
 
-- name: install nginx
-  dnf: name=nginx state=present
+# - name: install nginx
+#   dnf: name=nginx state=present
 
 # - name: confirm nginx runs
 #   service: name=nginx state-started enabled=yes
