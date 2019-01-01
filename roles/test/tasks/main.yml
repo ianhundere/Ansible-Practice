@@ -11,7 +11,7 @@
       validate_certs: no
 
       skip_broken: yes
-      
+
 - name: check nginx is running
   service: name=nginx state-started enabled=yes
 
@@ -27,6 +27,6 @@
 - debug: msg="{{ hello.stderr }}"
 
 - name: create a file
-    file:
-        path: /hello/good-day
-        state: touch
+  file:
+    path: /hello/good-day
+    state: touch
