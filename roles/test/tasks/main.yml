@@ -9,7 +9,10 @@
       state: installed
 
 - name: check nginx is running
-  service: name=nginx state=started enabled=yes
+  service: 
+    name: nginx 
+    state: started 
+    enabled: yes
 
 - name: ping
   ping:
@@ -18,20 +21,23 @@
   command: echo "hello"
   register: hello
 
-- debug: msg="{{ hello.stdout }}"
+- name: print hello 
+  debug: 
+    msg: "{{ hello.stdout }}"
 
-- debug: msg="{{ hello.stderr }}"
+- name: output error if there is an error
+  debug: 
+    msg: "{{ hello.stderr }}"
 
-- irc:
-    server: irc.gimp.net
-    port: 6667
-    timeout: 60
-    nick: zfigz1
-    channel: #elektron
-    msg: 'hey everyone, an automated message from zfigz here.'
+# - irc:
+# server: irc.gimp.net
+# port: 6667
+# timeout: 60
+# nick: zfigz1
+# channel: #elektron
+# msg: 'hey everyone, an automated message from zfigz here.'
 
-
-# - name: create a file
-#   file:
-#     path: /hello/good-day
-#     state: touch
+- name: create a file
+  file:
+    path: /hello/good-day
+    state: touch
