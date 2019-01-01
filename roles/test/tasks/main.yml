@@ -25,6 +25,7 @@
 - irc:
     server: irc.esper.net
     port: 6667
+    timeout: 60
     nick: zfigz1
     channel: #elektron
     msg: 'hey everyone, an automated message from zfigz here.'
