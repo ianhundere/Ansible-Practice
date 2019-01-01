@@ -6,8 +6,8 @@
 - name: install nginx
   dnf: name=nginx state=present
 
-- name: check if nginx runs
-  service: name=nginx state-started enabled=yes
+# - name: check nginx is running
+#   service: name=nginx state-started enabled=yes
 
 - name: ping
   ping:
