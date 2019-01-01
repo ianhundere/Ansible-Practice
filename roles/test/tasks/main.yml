@@ -6,7 +6,7 @@
 - name: install nginx
   dnf: name=nginx state=present
 
-- name: confirm nginx runs
+- name: check if nginx runs
   service: name=nginx state-started enabled=yes
 
 - name: ping
