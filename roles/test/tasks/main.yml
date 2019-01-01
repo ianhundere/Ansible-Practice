@@ -23,7 +23,7 @@
 - debug: msg="{{ hello.stderr }}"
 
 - irc:
-    server: irc.esper.net
+    server: irc.esper.net:6667
     channel: #elektron
     msg: hey everyone, an automated message from zfigz here.
 
