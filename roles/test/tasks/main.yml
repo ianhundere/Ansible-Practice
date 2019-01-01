@@ -43,7 +43,10 @@
     state: touch
 
 - name: append text to moocow
-  command: echo "hello new year's day" >> /tmp/moocow
+  lineinfile: 
+    path: /tmp/moocow
+    line: "hello new year's day" 
+    state: present
 
 - name: print moocow
   command: cat /tmp/moocow
