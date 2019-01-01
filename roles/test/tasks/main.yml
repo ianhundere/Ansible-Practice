@@ -7,7 +7,7 @@
   apt:
       name: nginx
       state: installed
-      
+
 - name: check nginx is running
   service: name=nginx state=started enabled=yes
 
@@ -22,7 +22,12 @@
 
 - debug: msg="{{ hello.stderr }}"
 
-- name: create a file
-  file:
-    path: /hello/good-day
-    state: touch
+- irc:
+    server: irc.esper.net
+    channel: #elektron
+    msg: hey everyone, an automated message from zfigz here.
+
+# - name: create a file
+#   file:
+#     path: /hello/good-day
+#     state: touch
