@@ -6,8 +6,8 @@
 - name: install nginx
   yum: name=nginx state=present
 
-- name: confirm nginx runs
-  service: name=nginx state-started enabled=yes
+# - name: confirm nginx runs
+#   service: name=nginx state-started enabled=yes
 
 - name: ping
   ping:
