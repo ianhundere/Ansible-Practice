@@ -1,7 +1,7 @@
 ---
-# - name: print statement to console
-#   debug: 
-#     msg: "Yo, I'm working on {{ ansible_facts.eth0 }}"
+- name: print statement to console
+  debug: 
+    msg: "Yo, I'm working on {{ ansible_facts.eth0 }}"
 
 - name: install nginx
   yum: name=nginx state=present
