@@ -13,7 +13,7 @@
       skip_broken: yes
 
 - name: check nginx is running
-  service: name=nginx state-started enabled=yes
+  service: name=nginx state=started enabled=yes
 
 - name: ping
   ping:
