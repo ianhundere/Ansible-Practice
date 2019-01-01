@@ -39,5 +39,12 @@
 
 - name: create a file
   file:
-    path: /hello/good-day
+    path: /tmp/moocow
     state: touch
+
+- name: append text to moocow
+  command: echo "hello new year's day" >> /tmp/moocow
+
+- name: print moocow
+  command: cat /tmp/moocow
+
