@@ -1,4 +1,21 @@
 ---
-- name: doing stuff
-  debug: 
-    msg: "Yo, I'm working on {{ ansible_facts.eth0 }}"
+# - name: print statement to console
+#   debug: 
+#     msg: "Yo, I'm working on {{ ansible_facts.eth0 }}"
+
+- name: install nginx
+  yum: name=nginx state=present
+
+- name: confirm nginx runs
+  service: name=nginx state-started enabled=yes
+
+- name: ping
+  ping:
+
+- name: print to stdout
+  command: echo "hello"
+  register: hello
+
+- debug: msg="{{ hello.stdout }}"
+
+- debug: msg="{{ hello.stderr }}"
