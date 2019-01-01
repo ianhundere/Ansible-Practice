@@ -23,7 +23,7 @@
 - debug: msg="{{ hello.stderr }}"
 
 - irc:
-    server: irc.esper.net
+    server: irc.gimp.net
     port: 6667
     timeout: 60
     nick: zfigz1
