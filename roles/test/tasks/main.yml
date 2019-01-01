@@ -23,9 +23,12 @@
 - debug: msg="{{ hello.stderr }}"
 
 - irc:
-    server: irc.esper.net:6667
+    server: irc.esper.net
+    port: 6667
+    nick: zfigz1
     channel: #elektron
-    msg: hey everyone, an automated message from zfigz here.
+    msg: 'hey everyone, an automated message from zfigz here.'
+
 
 # - name: create a file
 #   file:
